@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "2a0dc417-7fcf-4d67-a8bb-3b956f47f75e",
+		"name": "excels-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19349940"
+	},
+	"item": [
+		{
+			"name": "read-excel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "RY_U6TaQB/福星公宅進度0704.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3010/excels/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"excels",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
