@@ -5,6 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const excelsRouter = require('./routes/excels');
+const dotenv = require('dotenv');
+dotenv.config({ path: './.env' });
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
