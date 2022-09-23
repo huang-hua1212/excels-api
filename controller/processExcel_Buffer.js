@@ -9,6 +9,7 @@ async function readExceLFile(encodeFile64) {
         const sheetContent = xl.utils.sheet_to_json(workSheet);
         excelObj[sheetName]= sheetContent;
     })
+    console.log(excelObj);
     return excelObj;
 }
 

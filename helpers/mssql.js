@@ -7,4 +7,6 @@ const DataTypes = {
     number: 'numeric(18, 7)',
 };
 
+
+
 exports.DataTypes = DataTypes;

@@ -39,9 +39,8 @@ router.post('/create-table-save-excel-to-mssql', uploadMulter.single('file'), (r
 router.post('/save-excel-to-mssql', uploadMulter.single('file'), async (req, res)=>{
     const encodeFile64 = req.file.buffer.toString('base64');
     const mssql = new Mssql();
-    const createTableStr = `Create Table ShopList ( id uniqueidentifier, name nvarchar(50) )`;
-    req.excelData = await readExceLFile(encodeFile64);
-    mssql.saveExceltoSql(req, res);
+    req.sqlDataToInsert = await readExceLFile(encodeFile64);
+    mssql.insert(req, res);
     // readExceLFile(encodeFile64).then((data)=>{
     //     req.excelData = data;
     //     console.log(data);

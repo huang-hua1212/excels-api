@@ -9,5 +9,3 @@ const workSheet = workBook.Sheets[sheetNames[0]];
 //返回json資料
 // const data =xl.utils.sheet_to_json(worksheet);
 const data =xl.utils.sheet_to_json(workSheet);
-
-console.log(data);
